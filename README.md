@@ -6,17 +6,15 @@ Federated Clustered Learning (FCL) was designed to be a fully adjustable code ba
 
 # How to use FCL?
 As FCL was designed to be an easy-to-use boilerplate, it comes in several different ways to use it.
-**Python pip**
-As FCL is registered in the Python Package Index (PyPI), it can be downloaded using the pip install command. Simply run:
-``pip install FCL``
-**Template Cloning**
-You can also clone the the repository using git and use it with poetry framework. The package is built with the help of [Poetry](https://python-poetry.org/). To install the project together with a virtual environment, navigate to the main folder and run:
+## PIP
+The FCL library is registered in the Python Package Index (PyPI) under the name of FedCL and it can be downloaded using the pip install command. Simply run:
+``pip install fedcl``
+While using the pip-installed FedCL, it is possible to import modules directly, as illustrated in the **Examples** section/
+## Poetry Install
+The FCL library can also cloned and used together with the [Poetry Framework](https://python-poetry.org/). 
+It requires cloning the repository directly from the GitHub. To install the project together with a virtual environment, navigate to the main folder and run the following command:
 ``poetry install``.
 The virtual environment will be installed together with the required dependencies.
-
-## Project layout
-
-1. [Tutorials](tutorials.md)
-2. [How-To Guides](how-to-guides.md)
-3. [Reference](reference.md)
-4. [Examples](examples.md)
+To use the FCL modules together with the poetry environment, you should activate the poetry shell at the beginning of each session by executing the command:
+``poetry shell``
+Alternatively, it is possible to execute scripts without directly entering the poetry shell. For details, [consult the original documentation](https://python-poetry.org/).
