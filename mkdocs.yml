@@ -1,0 +1,18 @@
+# mkdocs.yml
+site_name: Clustered Federated Learning (CFL)
+
+theme:
+  name: "material"
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [.\EFL]  # actually not needed, default
+
+nav: 
+  - index.md
+  - tutorials.md
+  - how-to-guides.md
+  - reference.md
+  - examples.md
