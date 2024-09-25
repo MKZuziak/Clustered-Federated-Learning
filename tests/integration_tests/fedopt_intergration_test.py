@@ -7,11 +7,11 @@ from sklearn.cluster import KMeans
 
 from tests.test_props.datasets import return_mnist
 from tests.test_props.nets import NeuralNetwork
-from EFL.model.federated_model import FederatedModel
-from EFL.node.federated_node import FederatedNode
-from EFL.simulation.simulation import Simulation
-from EFL.aggregators.fedopt_aggregator import Fedopt_Optimizer
-from EFL.files.archive import create_archive
+from FedCL.model.federated_model import FederatedModel
+from FedCL.node.federated_node import FederatedNode
+from FedCL.simulation.simulation import Simulation
+from FedCL.aggregators.fedopt_aggregator import Fedopt_Optimizer
+from FedCL.files.archive import create_archive
 
 def integration_test():
     (metrics_savepath, 
@@ -23,7 +23,7 @@ def integration_test():
      ) = create_archive(os.getcwd())
     
     
-    with open(f'/home/mzuziak/snap/snapd-desktop-integration/83/Documents/EFL/tests/test_props/clustered_dataset/FMNIST_30_dataset_pointers', 'rb') as file:
+    with open(f'/home/mzuziak/snap/snapd-desktop-integration/83/Documents/FedCL/tests/test_props/clustered_dataset/FMNIST_30_dataset_pointers', 'rb') as file:
         data = pickle.load(file)
     # DATA: Selecting data for the orchestrator
     orchestrator_data = data[0]

@@ -5,7 +5,7 @@ from scipy.spatial.distance import cosine
 from numpy import dot
 from numpy.linalg import norm
 
-from EFL.aggregators.distances import calculate_cosine_similarity
+from FedCL.aggregators.distances import calculate_cosine_similarity
 
 
 class Test_Distance(unittest.TestCase):

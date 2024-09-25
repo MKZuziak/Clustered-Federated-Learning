@@ -5,8 +5,8 @@ import os
 
 import torch
 
-from EFL.node.federated_node import FederatedNode
-from EFL.model.federated_model import FederatedModel
+from FedCL.node.federated_node import FederatedNode
+from FedCL.model.federated_model import FederatedModel
 from tests.test_props.datasets import return_mnist
 from tests.test_props.nets import NeuralNetwork
 

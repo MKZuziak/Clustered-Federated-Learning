@@ -3,7 +3,7 @@ from collections import OrderedDict
 
 import numpy as np  
 
-from EFL.node.federated_node import FederatedNode
+from FedCL.node.federated_node import FederatedNode
 
 def train_nodes(
     node: FederatedNode,

@@ -9,19 +9,19 @@ import numpy as np
 from sklearn import cluster
 from sklearn.cluster import AgglomerativeClustering
 
-from EFL.model.federated_model import FederatedModel
-from EFL.node.federated_node import FederatedNode
-from EFL.operations.orchestrations import train_nodes, sample_nodes
-from EFL.aggregators.aggregator import Aggregator
-from EFL.aggregators.distances import calculate_cosine_similarity, calculate_cosine_dist, compute_max_update_norm, compute_mean_update_norm
-from EFL.aggregators.temperature import calculate_temperature
-from EFL.operations.evaluations import evaluate_model, automatic_node_evaluation, automatic_generalizability_evaluation
-from EFL.files.handlers import save_nested_dict_ascsv
-from EFL.files.loggers import orchestrator_logger
-from EFL.utils.computations import average_of_weigts
-from EFL.utils.select_gradients import select_gradients
-from EFL.data_structures.cluster_sturcutre import Cluster_Structure
-from EFL.utils.splitters import chunker_dict
+from FedCL.model.federated_model import FederatedModel
+from FedCL.node.federated_node import FederatedNode
+from FedCL.operations.orchestrations import train_nodes, sample_nodes
+from FedCL.aggregators.aggregator import Aggregator
+from FedCL.aggregators.distances import calculate_cosine_similarity, calculate_cosine_dist, compute_max_update_norm, compute_mean_update_norm
+from FedCL.aggregators.temperature import calculate_temperature
+from FedCL.operations.evaluations import evaluate_model, automatic_node_evaluation, automatic_generalizability_evaluation
+from FedCL.files.handlers import save_nested_dict_ascsv
+from FedCL.files.loggers import orchestrator_logger
+from FedCL.utils.computations import average_of_weigts
+from FedCL.utils.select_gradients import select_gradients
+from FedCL.data_structures.cluster_sturcutre import Cluster_Structure
+from FedCL.utils.splitters import chunker_dict
 
 
 # set_start_method set to 'spawn' to ensure compatibility across platforms.

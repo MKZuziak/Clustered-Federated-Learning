@@ -3,7 +3,7 @@ import copy
 
 import torch
 
-from EFL.utils.computations import average_of_weigts
+from FedCL.utils.computations import average_of_weigts
 from tests.test_props.nets import NeuralNetwork
 
 

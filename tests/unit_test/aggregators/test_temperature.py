@@ -1,6 +1,6 @@
 import unittest
 
-from EFL.aggregators.temperature import calculate_temperature
+from FedCL.aggregators.temperature import calculate_temperature
 
 
 class Test_Temperature(unittest.TestCase):

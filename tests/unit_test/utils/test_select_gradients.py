@@ -3,7 +3,7 @@ import copy
 
 import torch
 
-from EFL.utils.select_gradients import select_gradients
+from FedCL.utils.select_gradients import select_gradients
 from tests.test_props.nets import NeuralNetwork
 
 

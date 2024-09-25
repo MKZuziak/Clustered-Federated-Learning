@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "clustered_fl"
-version = "0.1.0"
+name = "FedCL"
+version = "0.1.1"
 description = ""
 authors = ["Maciej Krzysztof Zuziak <maciej.k.zuziak@protonmail.com>"]
 readme = "README.md"
-packages = [{include = "EFL"}]
+packages = [{include = "FedCL"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

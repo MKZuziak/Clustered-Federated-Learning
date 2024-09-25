@@ -5,11 +5,11 @@ from torch import optim
 
 from tests.test_props.datasets import return_mnist
 from tests.test_props.nets import NeuralNetwork
-from EFL.model.federated_model import FederatedModel
-from EFL.node.federated_node import FederatedNode
-from EFL.simulation.simulation import Simulation
-from EFL.aggregators.aggregator import Aggregator
-from EFL.files.archive import create_archive
+from FedCL.model.federated_model import FederatedModel
+from FedCL.node.federated_node import FederatedNode
+from FedCL.simulation.simulation import Simulation
+from FedCL.aggregators.aggregator import Aggregator
+from FedCL.files.archive import create_archive
 
 def integration_test():
     (metrics_savepath, 

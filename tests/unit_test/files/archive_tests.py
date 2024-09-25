@@ -1,6 +1,6 @@
 import unittest
 
-from EFL.files.archive import create_archive
+from FedCL.files.archive import create_archive
 
 
 class Archive_Tests(unittest.TestCase):

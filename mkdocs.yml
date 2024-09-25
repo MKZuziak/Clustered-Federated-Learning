@@ -8,7 +8,7 @@ plugins:
 - mkdocstrings:
     handlers:
       python:
-        paths: [.\EFL]  # actually not needed, default
+        paths: [.\FedCL]  # actually not needed, default
 
 nav: 
   - index.md

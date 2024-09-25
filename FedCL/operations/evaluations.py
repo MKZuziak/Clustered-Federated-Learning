@@ -2,8 +2,8 @@ import csv
 import os
 import copy
 
-from EFL.model.federated_model import FederatedModel
-from EFL.node.federated_node import FederatedNode
+from FedCL.model.federated_model import FederatedModel
+from FedCL.node.federated_node import FederatedNode
 
 
 def evaluate_model(

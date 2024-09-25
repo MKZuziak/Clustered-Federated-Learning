@@ -1,6 +1,6 @@
 import unittest
 
-from EFL.aggregators.aggregator import Aggregator
+from FedCL.aggregators.aggregator import Aggregator
 
 
 class Test_Aggregator(unittest.TestCase):
