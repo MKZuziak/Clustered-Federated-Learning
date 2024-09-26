@@ -16,9 +16,11 @@ from FedCL.files.archive import create_archive
 def baseline_script():
     # Defining global variables
     ROOT_PATH = os.getcwd() # ROOT PATH for all the results
-    ARCHIVE_NAME = "BASELINE_DEMO" # Name of the archives
-    NET_ARCHITECTURE = timm.create_model('resnet18', num_classes=10, pretrained=False, in_chans=1) # Net architecture for solving our task locally
+    ARCHIVE_NAME = "BRIGGS_DEMO" # Name of the archives
+    NET_ARCHITECTURE = timm.create_model('mobilenetv2_035', num_classes=10, pretrained=False, in_chans=1) # Net architecture for solving our task locally
     NUMBER_OF_CLIENTS=10 # Number of clients that will participate in the simulation.
+    DISTANCE_THRESHOLD = 0.05 # distance threshold.
+    CLUSTERING_ROUND = 20 # CLustering Round
 
     # Step 1: Create the direcory for storing results
     (
@@ -72,18 +74,20 @@ def baseline_script():
     })
 
     # Step 10: Initiate the simulation (use .training_protocol_baseline)
-    simulation_instace.training_protocol_baseline(
+    simulation_instace.training_protocol_briggs(
         iterations=50,
         sample_size=NUMBER_OF_CLIENTS,
         local_epochs=3,
         aggrgator=fedopt_aggregator,
+        clustering_round=CLUSTERING_ROUND,
+        distance_threshold=DISTANCE_THRESHOLD,
         learning_rate=1.0,
         metrics_savepath=metrics_savepath,
         nodes_models_savepath=nodes_models_savepath,
         orchestrator_models_savepath=orchestrator_model_savepath,
         sim_matrices_savepath=sim_matrices_savepath,
         cluster_structure_savepath=cluster_structure_savepath
-    )
+        )
 
 if __name__ == "__main__":
     baseline_script()

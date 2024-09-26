@@ -25,8 +25,8 @@ from FedCL.utils.splitters import chunker_dict
 
 
 # set_start_method set to 'spawn' to ensure compatibility across platforms.
-from multiprocessing import set_start_method
-set_start_method("spawn", force=True)
+# from multiprocessing import set_start_method
+# set_start_method("spawn", force=True)
 # Setting up the orchestrator logger
 orchestrator_logger = orchestrator_logger()
 

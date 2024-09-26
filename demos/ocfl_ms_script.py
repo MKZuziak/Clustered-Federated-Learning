@@ -6,6 +6,7 @@ import pickle
 from torch import optim
 import timm
 import datasets
+from sklearn.cluster import MeanShift
 
 from FedCL.model.federated_model import FederatedModel
 from FedCL.node.federated_node import FederatedNode
@@ -16,8 +17,8 @@ from FedCL.files.archive import create_archive
 def baseline_script():
     # Defining global variables
     ROOT_PATH = os.getcwd() # ROOT PATH for all the results
-    ARCHIVE_NAME = "BASELINE_DEMO" # Name of the archives
-    NET_ARCHITECTURE = timm.create_model('resnet18', num_classes=10, pretrained=False, in_chans=1) # Net architecture for solving our task locally
+    ARCHIVE_NAME = "OCFL_MS_DEMO" # Name of the archives
+    NET_ARCHITECTURE = timm.create_model('mobilenetv2_035', num_classes=10, pretrained=False, in_chans=1) # Net architecture for solving our task locally
     NUMBER_OF_CLIENTS=10 # Number of clients that will participate in the simulation.
 
     # Step 1: Create the direcory for storing results
@@ -71,19 +72,21 @@ def baseline_script():
         node: copy.deepcopy(nodes_data) for node in range(NUMBER_OF_CLIENTS)
     })
 
+    clustering_algorithm = MeanShift()
     # Step 10: Initiate the simulation (use .training_protocol_baseline)
-    simulation_instace.training_protocol_baseline(
+    simulation_instace.training_protocol_energy_oneshot(
         iterations=50,
         sample_size=NUMBER_OF_CLIENTS,
         local_epochs=3,
         aggrgator=fedopt_aggregator,
         learning_rate=1.0,
+        clustering_algorithm=clustering_algorithm,
         metrics_savepath=metrics_savepath,
         nodes_models_savepath=nodes_models_savepath,
         orchestrator_models_savepath=orchestrator_model_savepath,
         sim_matrices_savepath=sim_matrices_savepath,
         cluster_structure_savepath=cluster_structure_savepath
-    )
+        )
 
 if __name__ == "__main__":
     baseline_script()
