@@ -14,7 +14,7 @@ from FedCL.simulation.simulation import Simulation
 from FedCL.aggregators.fedopt_aggregator import Fedopt_Optimizer
 from FedCL.files.archive import create_archive
 
-def baseline_script():
+def ocfl_ms_script():
     # Defining global variables
     ROOT_PATH = os.getcwd() # ROOT PATH for all the results
     ARCHIVE_NAME = "OCFL_MS_DEMO" # Name of the archives
@@ -89,4 +89,4 @@ def baseline_script():
         )
 
 if __name__ == "__main__":
-    baseline_script()
+    ocfl_ms_script()

@@ -13,7 +13,8 @@ from FedCL.simulation.simulation import Simulation
 from FedCL.aggregators.fedopt_aggregator import Fedopt_Optimizer
 from FedCL.files.archive import create_archive
 
-def baseline_script():
+def sattler_script():
+    '''Source: https://arxiv.org/abs/1910.01991'''
     # Defining global variables
     ROOT_PATH = os.getcwd() # ROOT PATH for all the results
     ARCHIVE_NAME = "SATTLER_DEMO" # Name of the archives
